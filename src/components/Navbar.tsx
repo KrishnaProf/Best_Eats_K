@@ -67,7 +67,7 @@ const Navbar = () => {
 
         <nav>
           <ul>
-            <li>Orders</li>
+            <li>Orders </li>
             <li>Favorites</li>
             <li>Wallet</li>
             <li>Help</li>
