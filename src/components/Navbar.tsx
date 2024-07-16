@@ -4,7 +4,12 @@ import {
   AiOutlineSearch,
   AiOutlineShoppingCart,
   AiOutlineClose,
+  AiFillTag,
 } from "react-icons/ai";
+import { TbTruckDelivery } from "react-icons/tb";
+import { MdFavorite, MdHelp } from "react-icons/md";
+import { FaUserFriends, FaWallet } from "react-icons/fa";
+import { BsFillSaveFill } from "react-icons/bs";
 
 const Navbar = () => {
   const [Nav, setNav] = React.useState(false);
@@ -15,13 +20,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div
-        className={
-          Nav
-            ? "bg-black/40 fixed w-full"
-            : "p-4 flex items-center justify-between"
-        }
-      >
+      <div className="p-4 flex items-center justify-between">
         <div className="flex items-center">
           <AiOutlineMenu size={30} className="mx-2 " onClick={toggleNav} />
           <h1 className="text-2xl md:text-3xl lg:text-4xl px-2 flex flex-nowrap">
@@ -44,10 +43,17 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center bg-black rounded-full h-10 w-30 mx-2">
-          <AiOutlineShoppingCart size={30} className="text-white mx-2" />
-          <button className="text-white mx-2 p-2">Cart</button>
+          <AiOutlineShoppingCart size={20} className="text-white mx-2" />
+          <button className="text-white p-2">Cart</button>
         </div>
       </div>
+
+      {/* Overlay */}
+      {Nav ? (
+        <div className="bg-black/80 fixed w-full h-screen left-0 top-0 z-10"></div>
+      ) : (
+        ""
+      )}
 
       {/* Side Menu */}
       <div
@@ -66,14 +72,28 @@ const Navbar = () => {
         </div>
 
         <nav>
-          <ul>
-            <li>Orders </li>
-            <li>Favorites</li>
-            <li>Wallet</li>
-            <li>Help</li>
-            <li>Promotions</li>
-            <li>Best Ones</li>
-            <li>Invite Friends</li>
+          <ul className="flex flex-col p-4 text-gray-800">
+            <li className="text-xl py-4 flex">
+              <TbTruckDelivery size={25} className="mr-4" /> Orders
+            </li>
+            <li className="text-xl py-4 flex">
+              <MdFavorite size={25} className="mr-4" /> Favorites
+            </li>
+            <li className="text-xl py-4 flex">
+              <FaWallet size={25} className="mr-4" /> Wallet
+            </li>
+            <li className="text-xl py-4 flex">
+              <MdHelp size={25} className="mr-4" /> Help
+            </li>
+            <li className="text-xl py-4 flex">
+              <AiFillTag size={25} className="mr-4" /> Promotions
+            </li>
+            <li className="text-xl py-4 flex">
+              <BsFillSaveFill size={25} className="mr-4" /> Best Ones
+            </li>
+            <li className="text-xl py-4 flex">
+              <FaUserFriends size={25} className="mr-4" /> Invite Friends
+            </li>
           </ul>
         </nav>
       </div>
