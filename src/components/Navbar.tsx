@@ -44,7 +44,7 @@ const Navbar = () => {
 
         <div className="flex items-center bg-black rounded-full h-10 w-30 mx-2">
           <AiOutlineShoppingCart size={20} className="text-white mx-2" />
-          <button className="text-white p-2">Cart</button>
+          <button className="text-white p-2 border-none">Cart</button>
         </div>
       </div>
 
