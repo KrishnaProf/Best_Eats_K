@@ -21,7 +21,7 @@ const Foods = () => {
   };
 
   return (
-    <div>
+    <div className="px-4">
       <div>
         <h1 className="text-orange-500 font-bold text-4xl flex justify-center">
           Top rated Menu Items
@@ -97,7 +97,7 @@ const Foods = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4 ">
         {foods.map((item, index) => (
           <div
             key={index}
